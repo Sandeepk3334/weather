@@ -34,31 +34,6 @@ app.get('/',function(req,res){
 
 
 
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,function(){
     console.log('server is running at port 3000')
 })
-
-
-
-// app.post("/",function(req,res){
-
-//     const city = req.body.cityName;
-
-//     const url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=8427fdfb7d983800e0939ba1931bbd90&units=metric";
-
-//     https.get(url,function(response){
-//         console.log(response.statusCode);
-//         response.on('data',function(data){
-//             const weatherData = JSON.parse(data);
-//             const temp = weatherData.main.temp;
-//             const desc = weatherData.weather[0].description;
-//             const icon = weatherData.weather[0].icon;
-//             const imageUrl = "http://openweathermap.org/img/wn/" +icon + "@2x.png";
-
-//             res.write("<h1>The Tempertaure in "+city+" is " + temp + " degree celcius.</h1>");
-//             res.write("<h2>The weather is currently " + desc + "</h2>");
-//             res.write("<img src="+imageUrl+">");
-//             res.send();
-//         })
-//     })
-// })
