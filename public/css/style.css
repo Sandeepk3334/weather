@@ -148,7 +148,7 @@ h1,h2,h4,h5{
 
 
 /***************mobile ********************/
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 375px) {
     .container{
         width: 90%;
         height: 90vh;
